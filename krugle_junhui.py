@@ -19,6 +19,7 @@ starttime = None
 endtime = None
 print "before run test, starttime is %s , endtime is %s" % (starttime, endtime)
 display = Display(visible=0, size=(1024,768))
+# this is the parameter class
 class ParametrizedTestCase(unittest.TestCase):
     """ TestCase classes that want to be parametrized should
         inherit from this class.
