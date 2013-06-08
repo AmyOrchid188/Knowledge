@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 # Author: Junhui Liu <liujunhui08@gmail.com>
 # Created Time: 06/07/13 17:21:49 (CST)
-# Modified Time: 06/07/13 17:41:00 (CST)
+# Modified Time: 06/08/13 08:55:34 (CST)
 # Exercise 41: Learning To Speak Object Oriented
 
 import random
@@ -36,9 +36,9 @@ for word in urlopen(WORD_URL).readline():
     WORDS.append(word.strip())
 
 def convert(snippet, phrase):
-    class_name = [w.capitalize() for w in
+    class_names = [w.capitalize() for w in
                   random.sample(WORDS, snippet.count("###"))]
-    other_name = random.sample(WORDS, snippet.count("***"))
+    other_names = random.sample(WORDS, snippet.count("***"))
     results = []
     param_names = []
 
@@ -47,7 +47,7 @@ def convert(snippet, phrase):
         param_names.append(', '.join(random.sample(WORDS, param_count)))
 
     for sentence in snippet, phrase:
-        result == sentence[:]
+        result = sentence[:]
 
         # fake class names
         for word in class_names:
@@ -71,7 +71,7 @@ try:
         snippets = PHRASES.keys()
         random.shuffle(snippets)
 
-        for snippet in snipppets:
+        for snippet in snippets:
             phrase = PHRASES[snippet]
             question, answer = convert(snippet, phrase)
             if PHRASES_FIRST:
