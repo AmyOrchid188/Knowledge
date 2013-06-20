@@ -1,0 +1,21 @@
+.........E
+======================================================================
+ERROR: tests.parser_tests.test_number
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/junhui/Knowledge/Learn_Python/projects/skeleton/tests/parser_tests.py", line 74, in test_number
+    s = parser.parse_sentence(word_list)
+  File "/junhui/Knowledge/Learn_Python/projects/ex49/parser.py", line 80, in parse_sentence
+    return parse_subject(word_list, subj)
+  File "/junhui/Knowledge/Learn_Python/projects/ex49/parser.py", line 69, in parse_subject
+    obj = parse_object(word_list)
+  File "/junhui/Knowledge/Learn_Python/projects/ex49/parser.py", line 65, in parse_object
+    raise ParserError("Expected a noun or direction next.")
+ParserError: Expected a noun or direction next.
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (errors=1)
