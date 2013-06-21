@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 # Author: Junhui Liu <liujunhui08@gmail.com>
 # Created Time: 06/20/13 08:33:23 (CST)
-# Modified Time: 06/20/13 18:19:03 (CST)
+# Modified Time: 06/20/13 18:51:57 (CST)
 import web
 
 urls = (
@@ -11,16 +11,16 @@ urls = (
 
 app = web.application(urls, globals())
 
-render = web.template.render('templates/')
+render = web.template.render('templates/', base="layout")
 
 class Index(object):
     def GET(self):
-        form =  web.input(name="Nobody", greet=None)
-        if form.greet:
-            greeting = "%s, %s" % (form.greet, form.name)
-            return render.index(greeting=greeting)
-        else:
-            return "Error, greet is required."
+        return render.hello_form()
+
+    def POST(self):
+        form =  web.input(name="Nobody", greet="Hello")
+        greeting = "%s, %s" % (form.greet, form.name)
+        return render.index(greeting=greeting)
 
 if __name__ == "__main__":
     app.run()
