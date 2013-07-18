@@ -81,3 +81,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# customizing your project's templates
+TEMPLATE_DIRS = (
+    '/junhui/Knowledge/Learn_Django/mysite/my_template', # change this to your own directory
+)
