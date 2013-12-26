@@ -1,0 +1,15 @@
+09:01:34.290 INFO - Java: Sun Microsystems Inc. 20.0-b12
+09:01:34.291 INFO - OS: Linux 3.5.0-17-generic i386
+09:01:34.301 INFO - v2.25.0, with Core v2.25.0. Built from revision 17482
+09:01:34.301 INFO - "firefoxchrome" will be used as the browser mode for all sessions, no matter what is passed to getNewBrowserSession.
+09:01:34.391 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+09:01:34.392 INFO - Version Jetty/5.1.x
+09:01:34.392 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+09:01:34.393 INFO - Started HttpContext[/selenium-server,/selenium-server]
+09:01:34.393 INFO - Started HttpContext[/,/]
+09:01:34.405 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@23e5d1
+09:01:34.405 INFO - Started HttpContext[/wd,/wd]
+09:01:34.408 INFO - Started SocketListener on 0.0.0.0:4444
+09:01:34.408 INFO - Started org.openqa.jetty.jetty.Server@1f4689e
+18:35:00.379 INFO - Shutting down...
+18:35:00.379 INFO - Stopping Acceptor ServerSocket[addr=0.0.0.0/0.0.0.0,port=0,localport=4444]
