@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 # Author: Junhui Liu <liujunhui08@gmail.com>
 # Created Time: 01/16/14 10:02:40 (CST)
-# Modified Time: 01/16/14 10:14:44 (CST)
+# Modified Time: 02/26/14 09:18:32 (CST)
 
 # Code Coverage
 # ---------------
@@ -101,9 +101,35 @@ def test():
      q = Queue(10)
      #clear function
      q.clear()
-     #empty true
+     #empty should be true
      res=q.empty()
      print "res is %d" % res
-     assert res == 1, "res is not zero"
+     assert res == 1, "res is zero"
+     #enqueue item is int
+     res=q.enqueue(1)
+     assert res == True, "enqueue int failed."
+     #enqueue item is str
+     res=q.enqueue("hello")
+     assert res == True, "equeue str failed."
+     #enqueue item is bool
+     res=q.enqueue(True)
+     assert res==True, "enqueue bool failed."
+     #enqueue item is float
+     res=q.enqueue(1.4)
+     assert res == False, "enqueue float failed."
+     #enqueueall items are in list
+     str=['a','b','c']
+     res=q.enqueueall(str)
+     assert res==True, "enqueueall itmes in list failed."
+     #enqueueall itmes are in tuple
+     str1=tuple("uda")
+     res=q.enqueueall(str1)
+     assert res==True, "enqueueall items in tuple failed."
 
+     #enqueue tail item to run the if self.size== self.max
+     res=q.enqueue(3)
+     assert res==True, "enqueue last int item failed."
+     print q
+
+     #
 test()
