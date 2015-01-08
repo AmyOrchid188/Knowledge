@@ -1,0 +1,20 @@
+1. 安装Python 2.6 +
+2. 将Python安装路径添加到PATH环境变量中
+3. 安装xlrd, 操作方法是
+	⁃	解压xlrd文件
+	⁃	通过命令行工具，cd到包含setup.py的目录下
+	⁃	最后通过命令行工具，输入 python setup.py install 安装
+	⁃	安装成功后，在python\lib\site-packages 应该可以看到xlrd
+4. 安装xlwt，操作方法同上
+5. 安装jdk 1.6, 并确保 directory:\jdk1.6\bin 在PATH环境变量中
+6.修改脚本
+	•	分别到BESPEEDLOAD.PY中将如下文件路径 改为自己存放的位置，将by_name改为自己excel中的名称
+	•	get_rows_cols_count_from_excel(file= '/Users/liyun/Downloads/testspeedfinal.xls',by_name=u'Sheet1' 
+	•	将test.py中  file.save('/Users/liyun/Downloads/demo.xls') 改为自己要存放的文件名称和路径
+	•	注意测试机上要安装相应的浏览器，在脚本中我使用是safari, 如果本机没有装此浏览器，可以将 self.selenium = selenium("localhost", 4444, "*safari", "http://tools.pingdom.com/") 中对应的 *safari改为相应的浏览器名称， 比如 *firefox
+	•	      
+7. 下载selenium-remote-control-1.0.3，并做如下操作
+	•	先将selenium-python-client-driver-1.0.3目录中的 selenium.py 复制到python\lib\site-packages目录下
+	•	通过命令行工具，cd到selenium-server-1.0.3目录下
+	•	然后通过启动selenium server java -jar selenium-server.jar -interactive
+8.再启动一个命令行工具，然后cd到测试脚本所在的文件，然后在命令行中直接输入 python test.py
