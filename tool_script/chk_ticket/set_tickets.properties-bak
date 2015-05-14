@@ -1,0 +1,5 @@
+# Set the tickets for tracing
+tickets=8958,8947,8945,8979,8983
+
+# Set email address for receive the notification
+my_email=liujunhui@cn-acg.com
