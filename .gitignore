@@ -1,2 +1,6 @@
 #pyc file
 *.pyc
+#xlsx
+*.xlsx
+#xls
+*.xls
